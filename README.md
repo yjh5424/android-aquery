@@ -1,4 +1,6 @@
-# android-aquery
+# using android-aquery with HTTP
+  
+## Server APi 
 
 /post/school/notice/list  
 Request (Query Parameter)  
