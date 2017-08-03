@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public List<Data> getJSON(JSONArray jsonArray){
-        List<Data> JsonList=new ArrayList<>();
+        List<Data> arrayList=new ArrayList<>();
         try {
 
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -78,11 +78,11 @@ public class MainActivity extends AppCompatActivity {
                 String content = noticeObject.getString("Content");
                 String date = noticeObject.getString("Date");
                 int homeNumber = noticeObject.getInt("HomeNumber");
-                JsonList.add(new Data(title, homeNumber)); //intent로 다음 액티비티에 넘겨줄 honeNumber
+                arrayList.add(new Data(title, homeNumber)); //intent로 다음 액티비티에 넘겨줄 honeNumber
             }
         }catch (JSONException e){
             e.printStackTrace();
         }
-        return  JsonList;
+        return  arrayList;
     }
 }
